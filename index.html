@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/file.js" charset="UTF-8"></script>
+</head>
+<body>
+
+
+    <section class="section1 block">
+        <p class="s1_p1">Позаботься о цветочке</p>
+    
+        <button class="button1"> Начать </button>
+    
+    </section>
+
+
+    
+    <section class="section2 none">
+        <p class="s1_p2">Назовите ваше растение</p>
+        <input class="input2" type="text" name="" id="" placeholder="Мяу">
+        
+        <button class="button2"> Сохранить </button>
+    </section>
+    
+<div class="section3 none">
+
+        <img class="imgb1" src="./img/knopochka1.svg">
+        <img class="imgb2" src="./img/knopochka2.svg">
+        <img class="imgb3"src="./img/knopka3.svg">
+        <img class="rain" src="./img/droprain.svg">
+        
+
+    <div class="cvet">
+    <img src="./img/cvetochek.svg">
+    </div>
+
+</div>
+
+<script>
+    /* Скрипт для дождя */
+    document.querySelector(".imgb1").addEventListener("click", function() {
+        let rain = document.createElement("img");
+        rain.src = "./img/droprain.svg";
+        rain.className = "rain";
+        document.body.appendChild(rain);
+        
+        setTimeout(() => {
+            rain.style.display = "block";
+            rain.style.animation = "fall 2s linear forwards";
+        }, 10);
+        
+        setTimeout(() => {
+            rain.remove();
+        }, 2100);
+    });
+</script>
+    
+</body>
+</html> 
